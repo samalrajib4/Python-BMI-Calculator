@@ -1,0 +1,37 @@
+try:
+    Name = input("Enter Your Name: ")
+    Weight = int(input("Enter Your Weight in KG's: "))
+    Height = int(input("Enter Your Height in CM: "))
+    
+    Height_In_Metter = Height/100
+    BMI = Weight/(Height_In_Metter*Height_In_Metter)
+    
+    if Weight <=0 or Height <=0:
+        print("Enter a positive number...")
+    else:   
+        if (BMI<16):
+            print(Name +", You are Severe Thinness")
+            print("Your BMI is: ", BMI)
+        elif (BMI<17):
+            print(Name +", You are Moderate Thinness")
+            print("Your BMI is: ", BMI)
+        elif (BMI<18.5):
+            print(Name +", You are Mild Thinness")
+            print("Your BMI is: ", BMI)
+        elif (BMI<25):
+            print(Name +", You are Normal")
+            print("Your BMI is: ", BMI)
+        elif (BMI<30):
+            print(Name +", You are Overweight")
+            print("Your BMI is: ", BMI)
+        elif (BMI<35):
+            print(Name +", You are Obese Class I")
+            print("Your BMI is: ", BMI)
+        elif (BMI<40):
+            print(Name +", You are Obese Class II")
+            print("Your BMI is: ", BMI)
+        else:
+            print("You are Morebidly Obese")
+except ValueError:
+    print("Enter a Valid Valid Value Number of Height or Weight")
+    
